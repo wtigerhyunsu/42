@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gykim <gykim@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: hykang <hykang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/18 10:56:10 by gykim             #+#    #+#             */
-/*   Updated: 2020/07/18 14:27:29 by gykim            ###   ########.fr       */
+/*   Created: 2020/07/20 15:38:42 by hykang            #+#    #+#             */
+/*   Updated: 2020/07/20 15:38:44 by hykang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int		main(int argc, char *argv[])
 	int i;
 	int j;
 
-	i = 1;
-	while (i < argc)
+	i = argc - 1;
+	while (i > 0)
 	{
 		j = 0;
 		while (argv[i][j])
@@ -27,7 +27,7 @@ int		main(int argc, char *argv[])
 			j++;
 		}
 		write(1, "\n", 1);
-		i++;
+		i--;
 	}
 	return (0);
 }

@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gykim <gykim@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: hykang <hykang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/18 10:52:21 by gykim             #+#    #+#             */
-/*   Updated: 2020/07/18 14:27:06 by gykim            ###   ########.fr       */
+/*   Created: 2020/07/20 15:38:18 by hykang            #+#    #+#             */
+/*   Updated: 2020/07/20 15:38:21 by hykang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int argc, char *argv[])
+int		main(int argc, char *argv[])
 {
 	int i;
+	int j;
 
-	i = argc;
-	i = 0;
-	while (argv[0][i])
+	i = 1;
+	while (i < argc)
 	{
-		write(1, &argv[0][i], 1);
+		j = 0;
+		while (argv[i][j])
+		{
+			write(1, &argv[i][j], 1);
+			j++;
+		}
+		write(1, "\n", 1);
 		i++;
 	}
-	write(1, "\n", 1);
 	return (0);
 }
