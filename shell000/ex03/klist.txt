@@ -1,0 +1,5 @@
+Credentials cache: API:ACCB0D3E-F474-4A81-9622-B7E006A11818
+        Principal: hykang@42SEOUL.KR
+
+  Issued                Expires             Flags    Principal
+Jul  1 18:27:23 2020  Jul  2 04:27:23 2020  FPRIA  krbtgt/42SEOUL.KR@42SEOUL.KR
