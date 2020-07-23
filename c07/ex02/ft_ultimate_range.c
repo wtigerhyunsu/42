@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hykang <hykang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/22 23:47:23 by hykang            #+#    #+#             */
-/*   Updated: 2020/07/22 23:47:26 by hykang           ###   ########.fr       */
+/*   Created: 2020/07/22 23:49:00 by hykang            #+#    #+#             */
+/*   Updated: 2020/07/22 23:49:02 by hykang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strdup(char *src)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	int		i;
-	char	*ret;
+	int ret;
+	int *temp;
 
-	idx = 0;
-	while (src[idx])
-		++idx;
-	ret = (char*)malloc(idx + 1);
-	ret[idx] = 0;
-	while (--idx >= 0)
-		ret[idx] = src[idx];
+	if (max <= min)
+		return (0);
+	ret = max - min;
+	if (!(*range = (int*)malloc(sizeof(int) * ret)))
+		return (-1);
+	temp = *range;
+	while (max > min)
+		*temp++ = min++;
 	return (ret);
 }
