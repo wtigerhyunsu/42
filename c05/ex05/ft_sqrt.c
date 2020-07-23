@@ -6,13 +6,13 @@
 /*   By: hykang <hykang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 23:24:00 by hykang            #+#    #+#             */
-/*   Updated: 2020/07/22 19:54:04 by hykang           ###   ########.fr       */
+/*   Updated: 2020/07/22 23:44:38 by hykang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int				ft_sqrt(int nb)
 {
-	int ret;
+	long long	ret;
 
 	ret = 1;
 	if (nb == 1)
@@ -20,7 +20,7 @@ int				ft_sqrt(int nb)
 	while (ret * ret < nb)
 	{
 		ret++;
-		if (nb % ret == 0 && ret * ret == nb)
+		if (ret * ret == nb)
 			return (ret);
 	}
 	return (0);
